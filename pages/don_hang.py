@@ -2,8 +2,11 @@ import pandas as pd
 import streamlit as st 
 import datetime as dt 
 
+sheet_value = ['CuaHang', 'NhanVien', 'KhachHang', 'SanPham', 'DonHang']
 
-df = pd.read_excel('data_store_my_pham.xlsx', sheet_name='DonHang')
+df = pd.read_excel('data_store_my_pham.xlsx', sheet_name=sheet_value[4])
+
+
 
 # Lọc theo cửa hàng
 cua_hang = st.selectbox('**Lọc theo cửa hàng**',
